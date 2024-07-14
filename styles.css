@@ -1,0 +1,125 @@
+/* Reset some default styles for the example */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+
+.navcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+    margin-right: 180px;
+    margin-left: 180px;
+    padding: 30px;
+    background-color: #333;
+    color: #fff;
+    background-color: black;
+    border: 0.5px solid #ffffff;
+    border-radius: 12px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 18px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        order: -1;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+}
+
+
+
+.gridcontainer {  
+    display: grid;
+    justify-items: center;
+    justify-items: end;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "card1 card2 ."
+      "card1 card3 ."
+      ". . .";
+  }
+  
+  .card1 { 
+    grid-area: card1;
+    background-color: #00ff08;
+    width: 400px;
+    height: 400px;
+ }
+  
+  .card2 { 
+    grid-area: card2;
+    background-color: #ff0000;
+    width: 400px;
+    height: 200px;
+ }
+  
+  .card3 { 
+    grid-area: card3;
+    background-color: #8800ff;
+    width: 400px;
+    height: 200px;
+ }
+
